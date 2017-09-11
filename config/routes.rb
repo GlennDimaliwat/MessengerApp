@@ -3,9 +3,8 @@ Rails.application.routes.draw do
 
   get '/messages' => 'messages#index'
   get '/messages/new' => 'messages#new'
+  get '/message/:id'  => 'messages#view'
 
   post 'messages' => 'messages#create'
   
-  # destroy '/messages/:id' => 'messages#destroy'
-
 end

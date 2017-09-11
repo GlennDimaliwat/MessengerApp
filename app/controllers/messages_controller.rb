@@ -16,10 +16,6 @@ class MessagesController < ApplicationController
         end
     end
 
-    def destroy
-        Message.destroy(params[:id])
-    end
-
 private
     def message_params
         params.require(:message).permit(:content)
