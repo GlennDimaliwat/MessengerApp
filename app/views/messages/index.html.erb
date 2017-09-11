@@ -1,0 +1,14 @@
+<div class="messages">
+    <div class="container">
+        <% @messages.each do |message| %>
+            <p class="content">
+                <%= message.content %>
+            </p>
+            <p class="time">
+                <%= message.created_at %>
+            </p>    
+            <%# <%= link_to "Delete message", "messages/#{message.__id__}" %> %>
+        <% end %>
+        <%= link_to 'New Message', "messages/new" %>
+    </div>
+</div>
